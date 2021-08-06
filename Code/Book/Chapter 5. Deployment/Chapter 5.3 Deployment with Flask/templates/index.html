@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head%}
+
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Palmer Pengiuin Predictor</h1>
+
+    <form action="/predict" method="POST">
+        <div>
+            <p>Culmen Length</p>
+            <input type="text" name = "culmen_length" id="culmen_length">
+        </div>
+        
+        <div>
+            <p>Culment Depth</p>
+            <input type="text" name = "culmen_depth" id="culmen_depth">
+        </div>
+
+        <input type="submit" value="Predict">
+    </form>
+    <h2>Predicted: {{pred}}</h2>
+</div>
+{% endblock %}
